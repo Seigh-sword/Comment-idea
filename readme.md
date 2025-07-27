@@ -25,9 +25,9 @@ You drop your ideas in the comments of my YouTube channel. Then, I use [Wheel of
 
 ---
 
-## Technology
+## Distribution
 
-- Built with HTML and CSS.  
+- Built with HTML, JS and CSS.  
 - Hosted on GitHub Pages for easy access.  
 - Uses [Wheel of Names](https://wheelofnames.com/) for fair selection.  
 
