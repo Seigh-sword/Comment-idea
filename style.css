@@ -1,0 +1,135 @@
+/* =======================================
+   BODY & BASE STYLES
+======================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    animation: backgroundShift 15s infinite alternate;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Animate gradient background */
+@keyframes backgroundShift {
+    0% { background: linear-gradient(135deg, #1f1c2c, #928dab);}
+    50% { background: linear-gradient(135deg, #2a213c, #a79cbc);}
+    100% { background: linear-gradient(135deg, #1f1c2c, #928dab);}
+}
+
+/* =======================================
+   CANVAS CONTAINER
+======================================= */
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* =======================================
+   CANVAS BOX
+======================================= */
+.canvas-box {
+    display: flex;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.canvas-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* =======================================
+   IMAGE CONTAINER
+======================================= */
+.image-container {
+    flex: 0 0 auto;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.canvas-box:hover .image-container img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* =======================================
+   CONTENT CONTAINER
+======================================= */
+.content-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.content-container h2 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    animation: fadeSlide 1s ease forwards;
+}
+
+/* Paragraph animations */
+.content-container p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeSlide 0.8s ease forwards;
+}
+
+.content-container p:nth-child(2) { animation-delay: 0.2s; }
+.content-container p:nth-child(3) { animation-delay: 0.4s; }
+.content-container p:nth-child(4) { animation-delay: 0.6s; }
+.content-container p:nth-child(5) { animation-delay: 0.8s; }
+.content-container p:nth-child(6) { animation-delay: 1s; }
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =======================================
+   MEDIA QUERIES
+======================================= */
+@media(max-width: 768px) {
+    .canvas-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
