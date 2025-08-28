@@ -46,6 +46,14 @@ If you want to suggest improvements, new features, or help keep the site updated
 
 ---
 
+## Suggestions
+
+Here’s a table of suggestions that have been submitted and built:
+
+| Suggestion | User |
+|------------|------|
+| Burj Khalifa website | [Ryan](https://www.youtube.com/@Rayyu_Hibu) |
+
 Thank you for being part of this journey. Let’s keep creating and building together.
 
-— Seigh_sword  
+— Seigh_sword
